@@ -1,9 +1,5 @@
 package money;
 
-// テストを書く
-// コンパイラを通す
-// テストを走らせ、失敗を確認する
-// テストを通す
 // 重複を排除する
 public class Franc {
     private int amount;
