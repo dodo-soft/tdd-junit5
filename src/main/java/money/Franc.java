@@ -1,6 +1,6 @@
 package money;
 
-// 重複を排除する
+// TODO:重複を排除する
 public class Franc {
     private int amount;
 
