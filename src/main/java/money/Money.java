@@ -1,10 +1,10 @@
 package money;
 
-class Money {
+class Money implements Expression{
     protected int amount;
     protected String currency;
 
-    Money times(int multiplier){
+    Money times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
 
@@ -37,5 +37,9 @@ class Money {
                 "amount=" + amount +
                 ", currency='" + currency + '\'' +
                 '}';
+    }
+
+    public Expression plus(Money dollar) {
+        return new Money(amount + dollar.amount, currency);
     }
 }
