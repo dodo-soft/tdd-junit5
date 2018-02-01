@@ -21,10 +21,6 @@ public class MoneyTest {
         assertFalse(Money.franc(5).equals(Money.dollar(5)));
     }
 
-    // TODO:hashCode()
-    // TODO:他のオブジェクトとの等価性比較
-    // TODO:nullとの等価性比較
-
     @Test
     public void testCurrency() {
         assertEquals("USD", Money.dollar(1).currency());
