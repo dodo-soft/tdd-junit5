@@ -1,19 +1,12 @@
 package money;
 
-// TODO:重複を排除する
-public class Franc {
-    private int amount;
-
+// TODO:FrancとDollarを比較する
+public class Franc extends Money{
     Franc(int amount) {
         this.amount = amount;
     }
 
     Franc times(int multiplier) {
         return new Franc(amount * multiplier);
-    }
-
-    public boolean equals(Object object) {
-        Franc franc = (Franc) object;
-        return amount == franc.amount;
     }
 }
