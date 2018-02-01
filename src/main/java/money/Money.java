@@ -1,6 +1,5 @@
 package money;
 
-// TODO:Moneyの丸め処理
 class Money {
     protected int amount;
     protected String currency;
