@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MoneyTest {
     //TODO:$5 + 10CHF = $10 (レートが2:1の場合)
+    //TODO:通貨の概念
 
     @Test
     public void testMultiplication() {
@@ -19,6 +20,7 @@ public class MoneyTest {
         assertFalse(new Dollar(5).equals(new Dollar(6)));
         assertTrue(new Franc(5).equals(new Franc(5)));
         assertFalse(new Franc(5).equals(new Franc(6)));
+        assertFalse(new Franc(5).equals(new Dollar(5)));
     }
 
     // TODO:hashCode()
