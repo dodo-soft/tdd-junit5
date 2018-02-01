@@ -1,6 +1,6 @@
 package money;
 
-class Money implements Expression{
+class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -39,7 +39,11 @@ class Money implements Expression{
                 '}';
     }
 
-    public Expression plus(Money dollar) {
-        return new Money(amount + dollar.amount, currency);
+    public Expression plus(Money addend) {
+        return new Sum(this, addend);
+    }
+
+    public Money reduce(String to) {
+        return this; //TODO:Moneyを変換して換算を行う
     }
 }
