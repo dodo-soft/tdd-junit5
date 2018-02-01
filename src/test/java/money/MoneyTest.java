@@ -27,7 +27,6 @@ public class MoneyTest {
         assertEquals("CHF", Money.franc(1).currency());
     }
 
-    // TODO:$5+$5=$10
     @Test
     public void testSimpleAddition() {
         Money five = Money.dollar(5);
@@ -46,7 +45,6 @@ public class MoneyTest {
         assertEquals(five, sum.addend);
     }
 
-    //TODO:Reduce(Bank, String)
     @Test
     public void testReduceSum() {
         Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
@@ -60,5 +58,18 @@ public class MoneyTest {
         Bank bank = new Bank();
         Money result = bank.reduce(Money.dollar(1), "USD");
         assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testReduceMoneyDifferentCurrency() {
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result = bank.reduce(Money.franc(2), "USD");
+        assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testIdentityRate() {
+        assertEquals(1, new Bank().rate("USD", "USD"));
     }
 }
