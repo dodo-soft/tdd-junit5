@@ -13,6 +13,7 @@ public class MoneyTest {
         assertEquals(Money.dollar(10), five.times(2));
         assertEquals(Money.dollar(15), five.times(3));
     }
+
     @Test
     public void testEquality() {
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));
@@ -23,12 +24,11 @@ public class MoneyTest {
     }
 
     // TODO:hashCode()
-    // TODO:$5 + 10CHF = $10
     // TODO:他のオブジェクトとの等価性比較
     // TODO:nullとの等価性比較
 
     @Test
-    // TODO:削除する?
+    // TODO:testFrancMultiplication削除する?
     public void testFrancMultiplication() {
         Money five = Money.franc(5);
         assertEquals(Money.franc(10), five.times(2));
@@ -36,8 +36,14 @@ public class MoneyTest {
     }
 
     @Test
-    public void testCurrency(){
+    public void testCurrency() {
         assertEquals("USD", Money.dollar(1).currency());
         assertEquals("CHF", Money.franc(1).currency());
+    }
+
+    @Test
+    public void testDifferenceClassEquality() {
+        assertTrue(new Money(10, "USD").equals(new Dollar(10, "USD")));
+        assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
     }
 }
