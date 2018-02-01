@@ -1,6 +1,5 @@
 package money;
 
-// TODO:FrancとDollarを比較する
 public class Franc extends Money{
     Franc(int amount) {
         this.amount = amount;
