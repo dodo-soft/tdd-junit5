@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Bank {
-    // TODO:$5+$5がMoneyを返す
     private Map<Pair, Integer> rates = new HashMap<>();
 
     // reduce(動)簡約する。式を単純な形に変形する。
