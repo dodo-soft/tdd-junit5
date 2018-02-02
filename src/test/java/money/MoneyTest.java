@@ -73,7 +73,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testMixedAddition(){
+    public void testMixedAddition() {
         Expression fiveBucks = Money.dollar(5);
         Expression tenFrancs = Money.franc(10);
         Bank bank = new Bank();
@@ -83,7 +83,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testSumPlusMoney(){
+    public void testSumPlusMoney() {
         Expression fiveBucks = Money.dollar(5);
         Expression tenFrancs = Money.franc(10);
         Bank bank = new Bank();
@@ -94,7 +94,7 @@ public class MoneyTest {
     }
 
     @Test
-    public void testSumTimes(){
+    public void testSumTimes() {
         Expression fiveBucks = Money.dollar(5);
         Expression tenFrancs = Money.franc(10);
         Bank bank = new Bank();
